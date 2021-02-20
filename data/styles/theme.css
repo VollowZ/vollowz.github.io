@@ -1,0 +1,47 @@
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #282828;
+		color: #ffffff;
+	}
+	header.top-ber .logo,
+	header.top-ber .item a {
+		color: #ffffff;
+	}
+	header.top-ber .logo:hover,
+	header.top-ber .item a:hover {
+		color: #dddddd;
+	}
+	header.top-ber.sticky {
+		background: #00897b;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	}
+	.banner {
+		box-shadow: inset 0px -10px 8px 0px rgba(0, 0, 0, 0.4);
+	}
+	.banner h5 span {
+		color: #cecece;
+	}
+	.aboutMe h1 span {
+		color: #cecece;
+	}
+	footer.end-ber {
+		background: #555555;
+		box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.4);
+	}
+	*::-webkit-scrollbar {
+		background: #424242;
+	}
+	*::-webkit-scrollbar-thumb {
+		background: #686868;
+	}
+	*::-webkit-scrollbar-thumb:hover {
+		background: #7b7b7b;
+	}
+	*::-webkit-scrollbar-thumb:active {
+		background: #a1a1a1;
+	}
+	*::-webkit-scrollbar-track {
+		background: none;
+	}
+	/* qt */
+}

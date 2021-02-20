@@ -1,133 +1,46 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Calculator</title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-		<link rel="stylesheet" href="" />
-		<style>
-			*,
-			::after,
-			::before {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-family: "Noto Sans SC";
-				outline: none;
-			}
-			html,
-			body {
-				width: 100%;
-				height: 100%;
-			}
-			body {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background: #1f1f1f;
-				overflow: hidden;
-			}
-			.calc {
-				width: 310px;
-				height: 540px;
-				border-radius: 4px;
-				background: #303030;
-				box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-				overflow: hidden;
-			}
-			.calc > .output {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				padding: 20px;
-				height: 24%;
-				text-align: right;
-				background: #373737;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-			}
-			.calc > .output > .formula {
-				color: #bdbdbd;
-				font-size: 14px;
-			}
-			.calc > .output > .results {
-				color: #efefef;
-				font-size: 36px;
-			}
-			.calc > .ctrl {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				grid-template-rows: repeat(6, 1fr);
-				grid-column-gap: 0px;
-				grid-row-gap: 0px;
-				height: 76%;
-			}
-			.calc > .ctrl > button {
-				color: #dedede;
-				font-size: 16px;
-				background: none;
-				border: none;
-				border-radius: 0;
-				transition: 0.1s;
-			}
-			.calc > .ctrl > button:hover,
-			.calc > .ctrl > button.num:hover {
-				background: #4a4a4a;
-			}
-			.calc > .ctrl > button:active,
-			.calc > .ctrl > button.num:active {
-				background: #5d5d5d;
-			}
-			.calc > .ctrl > button.num {
-				font-weight: 500;
-				background: #282828;
-			}
-			.calc > .ctrl > button.is {
-				background: #134369;
-			}
-			.calc > .ctrl > button.is:hover {
-				background: #036fc4;
-			}
-			.calc > .ctrl > button.is:active {
-				background: #0078d7;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="calc">
-			<div class="output">
-				<p class="formula">0.2+0.3</p>
-				<p class="results">0.5</p>
-			</div>
-			<div class="ctrl">
-				<button>%</button>
-				<button>CE</button>
-				<button>C</button>
-				<button>×</button>
-				<button>1/x</button>
-				<button>x<sup>2</sup></button>
-				<button>\[\sqrt{x}\]</button>
-				<button>÷</button>
-				<button class="num">7</button>
-				<button class="num">8</button>
-				<button class="num">9</button>
-				<button>×</button>
-				<button class="num">4</button>
-				<button class="num">5</button>
-				<button class="num">6</button>
-				<button>-</button>
-				<button class="num">1</button>
-				<button class="num">2</button>
-				<button class="num">3</button>
-				<button>+</button>
-				<button class="num rositive_and_negative">+/-</button>
-				<button class="num">0</button>
-				<button class="num">.</button>
-				<button class="is">=</button>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc">
+        <div class="output">
+          <p class="formula"></p>
+          <p class="results"></p>
+        </div>
+        <div class="input">
+          <button>%</button>
+          <button>+/-</button>
+          <button onclick="document.querySelector('.formula').innerText = '';document.querySelector('.results').innerText = '';">C</button>
+          <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"/></svg></button>
+          <button>1/x</button>
+          <button>x<sup>2</sup></button>
+          <button>√</button>
+          <button onclick="document.querySelector('.results').innerText += this.innerText;">/</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">7</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">8</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">9</button>
+          <button onclick="document.querySelector('.results').innerText += this.innerText;">*</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">4</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">5</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">6</button>
+          <button onclick="document.querySelector('.results').innerText += this.innerText;">-</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">1</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">2</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">3</button>
+          <button onclick="document.querySelector('.results').innerText += this.innerText;">+</button>
+          <button class="num rositive_and_negative" onclick="document.querySelector('.results').innerText += this.innerText;">00</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">0</button>
+          <button class="num" onclick="document.querySelector('.results').innerText += this.innerText;">.</button>
+          <button class="is" onclick="document.querySelector('.formula').innerText = document.querySelector('.results').innerText;document.querySelector('.results').innerText = eval(document.querySelector('.results').innerText);">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

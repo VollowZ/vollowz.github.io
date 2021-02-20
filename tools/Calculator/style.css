@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans SC";
+  color: #fff;
+  outline: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121212;
+  overflow: hidden;
+}
+.container {
+  width: 310px;
+  height: 540px;
+}
+.calc {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #222222;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.calc > .output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  height: 26%;
+  text-align: right;
+  background: #272727;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.calc > .output > .formula {
+  height: 14px;
+  font-size: 14px;
+}
+.calc > .output > .results {
+  height: 36px;
+  font-size: 36px;
+}
+.calc > .input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 74%;
+}
+.calc > .input > button {
+  font-size: 16px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: 0.1s;
+}
+.calc > .input > button:hover,
+.calc > .input > button.num:hover {
+  background: #4a4a4a;
+}
+.calc > .input > button:active,
+.calc > .input > button.num:active {
+  background: #5d5d5d;
+}
+.calc > .input > button.num {
+  font-weight: 500;
+}
+.calc > .input > button.is {
+  background: #134369;
+}
+.calc > .input > button.is:hover {
+  background: #036fc4;
+}
+.calc > .input > button.is:active {
+  background: #0078d7;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  button:hover,
+  button:active {
+    background: transparent !important;
+  }
+}

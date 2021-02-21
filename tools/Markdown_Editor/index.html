@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>Markdown Editor</title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/marked/1.2.7/marked.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css" />
+		<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+				font-family: "更纱黑体 SC", "Noto Sans SC", sans-serif;
+			}
+			html,
+			body,
+			#editor {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+			}
+			#editor {
+				display: flex;
+			}
+			.input,
+			.output {
+				width: 50%;
+				height: 100%;
+				color: #eee;
+				border-radius: 0;
+				overflow: auto;
+			}
+			.input {
+				padding: 20px;
+				background: #2e2e2e;
+				font-size: 14px;
+				font-family: monospace;
+				border: none;
+				border-right: 1px solid #171717;
+				box-shadow: inset -6px 0 12px rgba(0, 0, 0, 0.2);
+				resize: none;
+				outline: none;
+			}
+			.output {
+				padding: 0 20px;
+				background: #212121;
+				border-left: 1px solid #171717;
+			}
+			pre {
+				padding: 0;
+				border-radius: 4px;
+			}
+			code {
+				padding: 0 2px;
+				font-family: monospace;
+			}
+			::-webkit-scrollbar {
+				width: 4px;
+				height: 4px;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #474747;
+				border-radius: 2px;
+			}
+		</style>
+	</head>
+	<body translate="no">
+		<div id="editor">
+			<textarea class="input"></textarea>
+			<div class="output"></div>
+		</div>
+		<script>
+			var input = document.querySelector(".input").value;
+			function update() {
+				input = document.querySelector(".input").value;
+				document.querySelector(".output").innerHTML = marked(document.querySelector(".input").value);
+				document.querySelector("pre").setAttribute("class", "hljs");
+				hljs.initHighlighting();
+			}
+			setInterval(function () {
+				if (input !== document.querySelector(".input").value) {
+					update();
+				}
+			}, 1);
+		</script>
+	</body>
+</html>

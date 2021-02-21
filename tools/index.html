@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>工具 | Vollow_Z</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #ffffff;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #121212;
+        background-size: cover;
+      }
+      .page-title {
+        margin: 20px;
+        font-size: 34px;
+        text-align: center;
+      }
+      .container {
+        width: 90%;
+        height: calc(100% - 74px);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+        background: transparent;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+      }
+      .container > a {
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        background: #222222;
+        box-shadow: none;
+        border-radius: 10px;
+        transition: 0.2s;
+      }
+      .container > a:hover {
+        background: #4a4a4a;
+      }
+      .container > a:active {
+        background: #5d5d5d;
+      }
+      .back {
+        font-size: 18px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: 0.2s;
+      }
+      .back > svg {
+        transition: 0.2s;
+      }
+      .back:hover > svg {
+        margin-right: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="page-title">工具</h1>
+    <div class="container">
+      <a href="./Calc/">计算器</a>
+      <a href="./Clock/">时钟</a>
+      <a href="./Markdown_Editor/">Markdown编辑器</a>
+      <a href="#"></a>
+    </div>
+    <a class="back" href="../"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="white" width="14px" height="14px"><rect fill="none" height="24" width="24"/><g><polygon points="17.77,3.77 16,2 6,12 16,22 17.77,20.23 9.54,12"/></g></svg>返回首页</a>
+  </body>
+</html>

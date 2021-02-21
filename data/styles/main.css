@@ -126,3 +126,8 @@ footer.end-ber .column h3 {
     display: none;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}

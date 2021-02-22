@@ -4,46 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Index | Vollow_Z</title>
-    <link rel="stylesheet" href="./data/styles/main.css" />
+    <link rel="stylesheet" href="./data/styles/main.min.css" />
   </head>
   <body>
-    <header class="top-ber">
+    <div class="progress">
+      <div class="progressbar"></div>
+    </div>
+    <header>
       <a class="logo" href="./">Vollow_Z</a>
       <nav class="item">
         <a href="./blogs/">博客</a>
         <a href="./works/">作品</a>
         <a href="./tools/">工具</a>
-        <a href="">资源</a>
         <a href="./friends/">朋友</a>
       </nav>
     </header>
-    <section class="banner">
-      <div class="title">
-        <h1>Hello world!</h1>
-        <h5><span>/* </span>I'm Vollow_Z!<span> */</span></h5>
-      </div>
-    </section>
     <script>
-      window.addEventListener("scroll", function() {
+      window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0)
+        header.classList.toggle("sticky", window.scrollY > 0);
       });
     </script>
     <main>
+      <section class="parallax">
+        <div class="text">
+          <h1>Hello World</h1>
+          <h5>I'm Vollow_Z</h5>
+        </div>
+      </section>
+
       <div class="aboutMe">
         <div class="text">
-          <h1>HELLO！我是<span>Vollow_Z</span>。</h1>
+          <h1></h1>
         </div>
-        <img src="" alt="">
+        <img src="" alt="" />
       </div>
       <div class="works"></div>
     </main>
-    <footer class="end-ber">
+    <footer>
       <div class="column">
         <h3>ME</h3>
-        <hr>
+        <hr />
         <div class="box">
-          <a href="//github.com/VollowZ" target="_blank"  rel="noopener noreferrer">GitHub</a>
+          <a href="//github.com/VollowZ" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="//space.bilibili.com/538360327" target="_blank" rel="noopener noreferrer">Bilibili</a>
         </div>
       </div>

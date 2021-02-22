@@ -2,7 +2,10 @@
 <html lang="zh-CN" theme="dark">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Index | Vollow_Z</title>
     <link rel="stylesheet" href="./data/styles/main.min.css" />
   </head>
@@ -11,34 +14,40 @@
       <div class="progressbar"></div>
     </div>
     <header>
-      <a class="logo" href="./">Vollow_Z</a>
-      <nav class="item">
+      <div class="left">
+        <button class="show-menu"></button>
+        <a class="logo" href="./">Vollow_Z</a>
+      </div>
+      <nav class="item right">
         <a href="./blogs/">博客</a>
         <a href="./works/">作品</a>
         <a href="./tools/">工具</a>
         <a href="./friends/">朋友</a>
       </nav>
     </header>
-    <script>
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>
     <main>
       <section class="parallax">
         <div class="text">
           <h1>Hello World</h1>
           <h5>I'm Vollow_Z</h5>
         </div>
+        <span class="copyright"
+          ><a
+            href="//unsplash.com/photos/gV6taBJuBTk"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Image</a
+          >
+          copyright belongs to
+          <a
+            href="//unsplash.com/@24ameer"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Ameer Basheer@24ameer</a
+          ></span
+        >
       </section>
 
-      <div class="aboutMe">
-        <div class="text">
-          <h1></h1>
-        </div>
-        <img src="" alt="" />
-      </div>
       <div class="works"></div>
     </main>
     <footer>
@@ -46,13 +55,24 @@
         <h3>ME</h3>
         <hr />
         <div class="box">
-          <a href="//github.com/VollowZ" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="//space.bilibili.com/538360327" target="_blank" rel="noopener noreferrer">Bilibili</a>
+          <a
+            href="//github.com/VollowZ"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="//space.bilibili.com/538360327"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Bilibili</a
+          >
         </div>
       </div>
       <div class="column">
         <h3>FRIENDS</h3>
       </div>
+      <div class="column"></div>
     </footer>
     <script src="./data/scripts/main.js"></script>
   </body>

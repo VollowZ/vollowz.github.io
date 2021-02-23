@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "GoodfonT.NET XS08";
+  src: url("GoodfonT_NET_XS08.eot?#iefix") format("embedded-opentype"),
+    url("GoodfonT_NET_XS08.woff2") format("woff2"),
+    url("GoodfonT_NET_XS08.woff") format("woff"),
+    url("GoodfonT_NET_XS08.ttf") format("truetype"),
+    url("GoodfonT_NET_XS08.svg#GoodfonT.NET XS08") format("svg");
+}

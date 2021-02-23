@@ -1,1 +1,86 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+    <link
+      rel="stylesheet"
+      href="./data/fonts/GoodfonT_NET_XS08/GoodfonT_NET_XS08.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #121212;
+        color: #ffffff;
+      }
+      .container {
+        display: flex;
+      }
+      .logo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: "GoodfonT.NET XS08";
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .logo:hover {
+        text-decoration: underline;
+      }
+      .logo:active {
+        color: #000000;
+        background: #ffffff;
+      }
+      .text {
+        margin: 0 0 0 10px;
+        padding: 0 0 0 10px;
+        border-left: 2px solid #ff1818;
+      }
+      .text pre {
+        padding: 2px 4px;
+        width: min-content;
+        font-size: 14px;
+      }
+      .err {
+        background: #ff1818;
+        border-radius: 2px;
+      }
+      @media (max-width: 420px) {
+        .container {
+          flex-direction: column;
+        }
+        .text {
+          margin: 10px 0 0 0;
+          padding: 10px 0 0 0;
+          border-top: 2px solid #ff1818;
+          border-left: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="logo" href="./">Vollow_Z</a>
+      <div class="text">
+        <pre class="err">Error</pre>
+        <pre>404 Not Found</pre>
+        <pre>该网页已被删除、移动或从未存在</pre>
+      </div>
+    </div>
+  </body>
+</html>

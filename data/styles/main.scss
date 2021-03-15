@@ -45,8 +45,7 @@ header {
         content: "";
         width: 24px;
         height: 24px;
-        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDE4aDE4di0ySDN2MnptMC01aDE4di0ySDN2MnptMC03djJoMThWNkgzeiIvPjwvc3ZnPg==")
-          center center / contain no-repeat;
+        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMFYweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zIDE4aDE4di0ySDN2MnptMC01aDE4di0ySDN2MnptMC03djJoMThWNkgzeiIvPjwvc3ZnPg==") center center / contain no-repeat;
       }
     }
     .logo {
@@ -211,6 +210,63 @@ footer {
       display: none;
     }
   }
+}
+
+nav.right-click-menu {
+  position: fixed;
+  padding: 8px 0;
+  width: 260px;
+  height: content;
+  background: #2d2e31;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  transition: 300ms linear opacity;
+  transform: scale(0);
+  transform-origin: top left;
+  will-change: transform, opacity;
+  visibility: visible;
+  user-select: none;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 8;
+  &.open {
+    display: inline-block;
+    transition: 280ms cubic-bezier(0, 1, 0, 1) transform;
+    transform: scale(1);
+    transform-origin: top left;
+    opacity: 1;
+  }
+  div {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 260px;
+    height: 30px;
+    &:hover {
+      background: #393a3d;
+    }
+  }
+  hr {
+    margin: 1px auto;
+    width: 90%;
+    height: 1.6px;
+    background: #393a3d;
+    border: none;
+    cursor: auto;
+  }
+}
+nav.right-click-menu div .text,
+nav.right-click-menu div .key {
+  font-size: 12px;
+  letter-spacing: 0.009375em;
+  text-decoration: none;
+}
+nav.right-click-menu div .text {
+  color: #fff;
+}
+nav.right-click-menu div .key {
+  color: #ddd;
 }
 
 ::-webkit-scrollbar {
